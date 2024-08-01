@@ -1,0 +1,269 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #c89ffa;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+nav button {
+  background-color: #a156fd;
+  border: none;
+  color: #121212;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(145deg, rgb(57, 56, 58), rgba(5, 0, 12, 1)); /* Degradado sólido */
+  color: #e0e0e0;
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  flex: 1 1 calc(33% - 2rem);
+  box-sizing: border-box;
+  max-width: calc(33% - 2rem);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.search-card {
+  background: linear-gradient(145deg, rgb(89, 87, 92), rgba(5, 0, 12, 1)); /* Degradado sólido */
+  color: #e0e0e0;
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button, input, textarea, select {
+  max-width: 500px; /* Limita el ancho máximo */
+  width: 100%; /* Asegura que ocupe todo el ancho hasta el máximo */
+  margin: 0.5rem auto; /* Espaciado y centrado */
+  display: block; /* Asegura que el elemento se comporte como un bloque para centrado */
+  background-color: #a3a2a8; /* Color de fondo */
+  border: 1px solid #75707c; /* Borde */
+  color: #10011a; /* Color del texto */
+  padding: 0.5rem; /* Padding */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Asegura que el padding y borde se incluyan en el ancho total */
+}
+
+button {
+  background-color: #bb86fc; /* Color de fondo específico para botones */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de mano */
+  text-align: center; /* Texto centrado */
+}
+
+button:hover {
+  background-color: #bb86fc;
+  opacity: 0.9; /* Opacidad al pasar el ratón por encima */
+}
+
+textarea {
+  resize: vertical; /* Permite el redimensionamiento vertical */
+}
+
+.show-more-button {
+  margin-top: 1rem;
+  background-color: #bb86fc;
+  border: none;
+  color: #121212;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  max-width: 200px; /* Limita el ancho máximo del botón */
+  width: auto; /* Asegura que el botón no sea de ancho completo */
+  margin: 1rem auto; /* Centra el botón horizontalmente */
+  display: block; /* Asegura que el botón se comporte como un bloque para centrado */
+}
+
+form button {
+  max-width: 200px; /* Limita el ancho máximo del botón en los formularios */
+  width: auto; /* Asegura que el botón no sea de ancho completo */
+  margin: 0.5rem auto; /* Centra el botón horizontalmente */
+  display: block; /* Asegura que el botón se comporte como un bloque para centrado */
+}
+
+/* Ajustes adicionales para los botones de eliminar comentario */
+.delete-button {
+  max-width: 100px; /* Limita el ancho máximo del botón */
+  width: auto; /* Asegura que el botón no sea de ancho completo */
+  margin: 0.5rem auto; /* Centra el botón horizontalmente */
+  display: block; /* Asegura que el botón se comporte como un bloque para centrado */
+  color: red; /* Color del texto */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Estilo para el título en ArticleDetail */
+.article-title {
+  background: linear-gradient(145deg, rgb(100, 98, 102), rgba(5, 0, 12, 1)); /* Degradado sólido */
+  color: #bb86fc; /* Color del texto */
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center;
+  font-size: 2.5rem; /* Tamaño grande del texto */
+  font-weight: bold; /* Texto en negrita */
+  line-height: 1.2; /* Altura de línea ajustada */
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.article-container {
+  background: linear-gradient(145deg, rgb(15, 2, 31), rgba(5, 0, 12, 1)); /* Degradado sólido */
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  border: 2px solid #000000;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-content {
+  text-align: left;
+}
+
+.article-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.article-meta {
+  color: #bb86fc;
+}
+
+.not-found-container {
+  background: linear-gradient(145deg, rgb(36, 24, 51), rgba(5, 0, 12, 1)); /* Degradado sólido */
+  color: #845f97;
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  border: 2px solid #bb86fc;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-home-link {
+  color: #bb86fc;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .search-card, .card, .article-container, .not-found-container {
+    padding: 1rem;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  button, input, textarea, select {
+    max-width: 100%;
+  }
+}

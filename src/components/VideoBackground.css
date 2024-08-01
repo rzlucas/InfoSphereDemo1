@@ -1,0 +1,26 @@
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca el video detrás de todos los elementos */
+  }
+  
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre todo el área manteniendo la proporción */
+    filter: brightness(50%); /* Oscurece el video */
+  }
+  
+  .video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de oscuridad */
+  }
+  
